@@ -1,0 +1,15 @@
+.header {
+    border: 2px solid rgb(83,97,123);
+    min-height: 100px;
+    border-radius: 8px;
+    font-family: BarlowSemiCondensedBold;
+    font-weight: 700;
+    color: white;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.scores-container {
+    background-color: white;
+    min-height: 80%;
+}
