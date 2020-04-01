@@ -9,7 +9,23 @@
     line-height: 22px;
 }
 
-.scores-container {
+.score-container {
     background-color: white;
     min-height: 80%;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.score-text {
+    color: rgb(74,89,169);
+    height: 20%;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+.score-value {
+    color: rgb(83,82,100);
+    font-size: 50px;
+    height: 80%;
+    margin-top: 10px;
 }
