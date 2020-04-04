@@ -9,17 +9,20 @@ function BasicRPS(props) {
               <div className="rpsUpperLeftItem">
                 <CircularComponent 
                 componentName={'paper'}
+                source={'basic'}
                 />
               </div>
               <div className="rpsUpperRightItem">
                 <CircularComponent 
                 componentName={'scissor'}
+                source={'basic'}
                 />
               </div>
             </div>
             <div className="rpsHalfContainer hv-center">
               <CircularComponent 
                 componentName={'rock'}
+                source={'basic'}
               />
             </div>
           </div>  

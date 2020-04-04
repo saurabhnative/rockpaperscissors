@@ -1,5 +1,5 @@
 .header {
-    border: 2px solid rgb(83,97,123);
+    border: 2px solid hsl(217, 16%, 45%);
     min-height: 100px;
     border-radius: 8px;
     font-family: BarlowSemiCondensedBold;
@@ -17,14 +17,14 @@
 }
 
 .score-text {
-    color: rgb(74,89,169);
+    color: hsl(229, 64%, 46%);
     height: 20%;
     font-size: 20px;
     margin-top: 3px;
 }
 
 .score-value {
-    color: rgb(83,82,100);
+    color: hsl(229, 25%, 31%);
     font-size: 50px;
     height: 80%;
     margin-top: 10px;
