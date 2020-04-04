@@ -1,10 +1,30 @@
 .rpsContainer {
-    border: 1px solid white;
     height: 50vh;
     background-image: url('../../assets/svgs/bg-triangle.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 53vw 37vw;
+    padding: 0px;
+}
+
+.rpsHalfContainer {
+    width: 100%;
+    min-height: 50%;
+}
+
+.rpsUpperLeftItem {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    padding-right: 19px;
+}
+
+.rpsUpperRightItem {
+    margin-top: auto;
+    width: 50%;
+    padding-left: 19px;
 }
 
 @media only screen and (min-width: 600px) {

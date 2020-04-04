@@ -14,3 +14,9 @@
   src: url('./assets/fonts/barlow/BarlowSemiCondensed-Bold.ttf'); /* IE9 Compat Modes */
   src: url('./assets/fonts/barlow/BarlowSemiCondensed-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
+
+.hv-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
