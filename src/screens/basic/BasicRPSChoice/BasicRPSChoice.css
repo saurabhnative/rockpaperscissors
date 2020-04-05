@@ -1,0 +1,37 @@
+.rpsChoice {
+    height: 40vh;
+    color: white;
+}
+
+.rpsChoiceHalf {
+    width: 50%;
+}
+
+.rpsChoiceHalfUpperSection {
+    width: 100%;
+    min-height: 22vh;
+}
+
+.rpsChoiceHalfLowerSection {
+    width: 100%;
+    font-family: BarlowSemiCondensedBold;
+}
+
+.gameResult {
+    height: 20vh;
+}
+
+.gameResultText {
+    color: white;
+    font-family: BarlowSemiCondensedBold;
+    font-size: 42px;
+}
+
+.playAgainButton {
+    color: hsl(229, 13%, 41%);
+    width: 180px;
+}
+
+.playAgainButton:focus {
+    outline: 0 !important;
+}

@@ -24,7 +24,10 @@ function CircularComponent(props) {
 
     const redirectToChoice = () => {
         if(props.source === 'basic') {
-           props.history.push("/basic/choice");  
+           props.history.push({
+            pathname: "/basic/choice",
+            state: { userChoice: props.componentName }
+           });  
         }
     }
     const outerCircleClass = `outerCircle ${props.componentName} hv-center`;

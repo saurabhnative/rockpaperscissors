@@ -1,6 +1,6 @@
 .rpsContainer {
     height: 50vh;
-    background-image: url('../../assets/svgs/bg-triangle.svg');
+    background-image: url('../../../assets/svgs/bg-triangle.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 53vw 37vw;
@@ -30,5 +30,16 @@
 @media only screen and (min-width: 600px) {
     .rpsContainer {
         background-size: 28vw 17vw;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .rpsUpperLeftItem{
+        padding-right: 85px;
+        padding-bottom: 20px;
+    }
+    .rpsUpperRightItem { 
+        padding-left: 85px;
+        margin-top: 10px;
     }
 }

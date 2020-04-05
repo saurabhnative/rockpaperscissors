@@ -16,7 +16,7 @@ function Header(props) {
                            SCORE
                        </div>
                        <div className="score-value">
-                           12
+                           {props.userScore}
                        </div>     
                     </div>
                 </div>
