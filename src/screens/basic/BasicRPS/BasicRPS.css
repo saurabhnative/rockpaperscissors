@@ -1,10 +1,9 @@
 .rpsContainer {
-    height: 61vh;
+    height: 53vh;
     background-image: url('../../../assets/svgs/bg-triangle.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 53vw 37vw;
-    padding-bottom: 11vh;
 }
 
 .rpsHalfContainer {
