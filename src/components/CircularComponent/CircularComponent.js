@@ -6,6 +6,7 @@ import rockIcon from '../../assets/svgs/icon-rock.svg';
 import spockIcon from '../../assets/svgs/icon-spock.svg';
 import lizardIcon from '../../assets/svgs/icon-lizard.svg';
 import { withRouter } from "react-router-dom";
+import Roll from 'react-reveal/Roll';
 
 function CircularComponent(props) {
     const returnImageComponent = (component) => {
@@ -42,14 +43,16 @@ function CircularComponent(props) {
         innerCircleClass += ` empty`;
     }
     return(
-       <div 
-        className={outerCircleClass}
-        onClick={() => redirectToChoice()}
-       >
-           <div className={innerCircleClass}>
-              {returnImageComponent(props.componentName)}
-           </div>
-       </div>     
+        <Roll bottom delay={500}>
+        <div 
+            className={outerCircleClass}
+            onClick={() => redirectToChoice()}
+        >
+            <div className={innerCircleClass}>
+                {returnImageComponent(props.componentName)}
+            </div>
+        </div>    
+       </Roll> 
     )
 }
 

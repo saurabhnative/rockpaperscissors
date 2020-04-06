@@ -24,7 +24,7 @@ function BasicRPSChoice(props) {
             const timer = setTimeout(() => {
                 const gameResult = getGameResult(userChoice, houseChoice);
                 const updatedScore = calculateGameScore(userScore, gameResult);
-                updateUserScore(updatedScore);
+                updateUserScore(updatedScore, 'update');
                 updateGameResult(gameResult);
               }, 800);
               return () => clearTimeout(timer);            

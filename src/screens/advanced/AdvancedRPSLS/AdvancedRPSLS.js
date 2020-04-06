@@ -7,6 +7,7 @@ import Fade from 'react-reveal/Fade';
 function AdvancedRPSLS(props) {
     return(
         <div className="row d-flex justify-content-center">
+            <Fade bottom>
             <div className="advancedRPSLSContainer col-10 col-lg-4 col-md-6 d-flex justify-content-center mt-3 flex-column">
                 <div className="advancedRPSLSTopContainer">
                     <CircularComponent 
@@ -35,7 +36,7 @@ function AdvancedRPSLS(props) {
                     />
                 </div>
             </div>
-            
+            </Fade>
        </div>     
     );
 }

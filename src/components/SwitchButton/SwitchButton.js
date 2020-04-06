@@ -7,6 +7,7 @@ function SwitchButton(props) {
     const switchIconClass = props.gameType === 'basic' ? 'fa-caret-square-o-up' : 'fa-caret-square-o-down';
     const changeGameMode = () => {
         props.switchGameMode(switchText);
+        props.updateUserScore(0, 'switch');
         props.history.push(`/${switchText}`);
     }
     return(

@@ -72,7 +72,7 @@ export const calculateGameScore = (userScore, gameResult) => {
             
         case 'lose':
             if(userScore > 0) {
-                return userScore - 1;
+                return userScore;
             } else {
                 return userScore;
             }
