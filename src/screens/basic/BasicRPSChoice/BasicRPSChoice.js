@@ -72,7 +72,7 @@ function BasicRPSChoice(props) {
         }
     }
     return(
-        <div className="row d-flex justify-content-center">
+        <div className="row d-flex row d-flex align-items-center flex-column">
           <div className="rpsChoice col-10 col-lg-6 mt-3 hv-center">
             {renderChoiceComponent(userChoice, 'YOU PICKED')}
             {renderChoiceComponent(houseChoice, 'THE HOUSE PICKED')}
