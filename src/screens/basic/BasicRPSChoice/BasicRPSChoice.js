@@ -3,6 +3,8 @@ import './BasicRPSChoice.css';
 import CircularComponent from '../../../components/CircularComponent/CircularComponent';
 import { getHouseChoice, getGameResult, calculateGameScore } from '../../../utils/commonUtils';
 import { withRouter } from "react-router-dom";
+import Fade from 'react-reveal/Fade';
+import Flash from 'react-reveal/Flash';
 
 function BasicRPSChoice(props) {
     const [houseChoice, updateHouseChoice] = useState('empty');
@@ -23,7 +25,7 @@ function BasicRPSChoice(props) {
                 const updatedScore = calculateGameScore(userScore, gameResult);
                 updateUserScore(updatedScore);
                 updateGameResult(gameResult);
-              }, 500);
+              }, 800);
               return () => clearTimeout(timer);            
         }  
     }, [houseChoice, userChoice])   
@@ -31,10 +33,12 @@ function BasicRPSChoice(props) {
         return(
             <div className="rpsChoiceHalf hv-center flex-column">
                 <div className="rpsChoiceHalfUpperSection hv-center">
+                <Fade right when={componentName !== 'empty'}>
                     <CircularComponent 
                         componentName={componentName}
                         source={'basic'}
                     />
+                </Fade>
                 </div>
                 <div className="rpsChoiceHalfLowerSection text-center mt-2">
                     {text}
@@ -74,7 +78,9 @@ function BasicRPSChoice(props) {
             {renderChoiceComponent(houseChoice, 'THE HOUSE PICKED')}
           </div>
           <div className="gameResult col-10 col-lg-6 mt-2 hv-center">
+            <Flash bottom when={gameResult !== null}>
              {renderGameResult()} 
+             </Flash>
           </div>
         </div>
     )

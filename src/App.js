@@ -9,6 +9,7 @@ import Header from './components/Header/Header';
 import BasicRPS from './screens/basic/BasicRPS/BasicRPS';
 import BasicRPSChoice from './screens/basic/BasicRPSChoice/BasicRPSChoice';
 import RulesButton from './components/RulesButton/RulesButton';
+import Fade from 'react-reveal/Fade';
 function App() {
   const [userScore, updateUserScore] = useState(0);
   const [gameType] = useState('basic');
@@ -16,7 +17,9 @@ function App() {
     <Router>
     <div className="App d-flex flex-column align-items-center">
       <div className="container">
-      <Header userScore={userScore}/>
+      <Fade top>
+        <Header userScore={userScore}/>
+      </Fade>
       <Switch>
           <Route path="/basic" exact={true}>
             <BasicRPS />
