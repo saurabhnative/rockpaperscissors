@@ -1,9 +1,10 @@
-.rulesButton {
+.lowerButton {
     background: transparent;
     border: 2px solid hsl(217, 16%, 45%);
     font-family: BarlowSemiCondensedBold;
     letter-spacing: 2px;
     color: white;
+    text-transform: uppercase;
 }
 
 .basicRulesImage {

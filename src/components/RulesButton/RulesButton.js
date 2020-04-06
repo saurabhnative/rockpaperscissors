@@ -1,6 +1,7 @@
 import React from 'react';
 import './RulesButton.css';
-import basicRules from '../../assets/images/basicRules.png'
+import basicRules from '../../assets/images/basicRules.png';
+import advancedRules from '../../assets/images/advancedRules.png';
 function RulesButton(props) {
     const renderRulesImage = () =>{
         if(props.gameType === 'basic'){
@@ -9,11 +10,17 @@ function RulesButton(props) {
                   <img src={basicRules} className="basicRulesImage" alt={'basicRulesImage'}/>
               </div>
           )      
-        } 
+        } else {
+            return(
+                <div className="rulesImageContainer hv-center">
+                    <img src={advancedRules} className="basicRulesImage" alt={'basicRulesImage'}/>
+                </div>
+            )
+        }
     }
     return(
-        <div className="row d-flex justify-content-center mt-4">
-            <button type="button" className="btn rulesButton" data-toggle="modal" data-target="#rulesModal">
+        <div>
+            <button type="button" className="btn lowerButton" data-toggle="modal" data-target="#rulesModal">
                 RULES
             </button>
             <div className="modal fade" id="rulesModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

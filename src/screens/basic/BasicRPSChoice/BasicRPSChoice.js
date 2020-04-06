@@ -10,10 +10,11 @@ function BasicRPSChoice(props) {
     const [houseChoice, updateHouseChoice] = useState('empty');
     const [gameResult, updateGameResult] = useState(null);
     const [userChoice] = useState(props.location.state.userChoice);
+    const gameType = props.location.state.gameType;
     const {userScore,updateUserScore} = props;
     useEffect(() => {
         const timer = setTimeout(() => {
-            const randomHouseChoice = getHouseChoice('basic');  
+            const randomHouseChoice = getHouseChoice(gameType);  
             updateHouseChoice(randomHouseChoice)
           }, 1000);
           return () => clearTimeout(timer);  
@@ -21,7 +22,7 @@ function BasicRPSChoice(props) {
     useEffect(() => {
         if(houseChoice !== 'empty') {
             const timer = setTimeout(() => {
-                const gameResult = getGameResult(userChoice, houseChoice, 'basic');
+                const gameResult = getGameResult(userChoice, houseChoice);
                 const updatedScore = calculateGameScore(userScore, gameResult);
                 updateUserScore(updatedScore);
                 updateGameResult(gameResult);
@@ -46,8 +47,8 @@ function BasicRPSChoice(props) {
             </div>   
         )
     }
-    const redirectToBasicHome = () => {
-        props.history.push("/basic"); 
+    const redirectToHome = () => {
+        props.history.push(`/${gameType}`); 
     }
     const renderGameResult = () => {
         if(gameResult === null) {
@@ -57,13 +58,16 @@ function BasicRPSChoice(props) {
         } else {
             return(
                 <div className='w-100 hv-center flex-column gameResultText'>
+                    <span className="gameResultRuleText">
+                        {gameResult.rule}
+                    </span>
                     <span>
                         {gameResult.text}
                     </span>
                     <button 
                         type="button" 
                         className="btn btn-light playAgainButton"
-                        onClick={() => redirectToBasicHome()}
+                        onClick={() => redirectToHome()}
                     >
                         PLAY AGAIN
                     </button>     

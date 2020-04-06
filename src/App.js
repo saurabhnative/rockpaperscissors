@@ -8,17 +8,20 @@ import {
 import Header from './components/Header/Header';
 import BasicRPS from './screens/basic/BasicRPS/BasicRPS';
 import BasicRPSChoice from './screens/basic/BasicRPSChoice/BasicRPSChoice';
+
+import AdvancedRPSLS from './screens/advanced/AdvancedRPSLS/AdvancedRPSLS';
 import RulesButton from './components/RulesButton/RulesButton';
+import SwitchButton from './components/SwitchButton/SwitchButton';
 import Fade from 'react-reveal/Fade';
 function App() {
   const [userScore, updateUserScore] = useState(0);
-  const [gameType] = useState('basic');
+  const [gameType, switchGameMode] = useState('advanced');
   return (
     <Router>
     <div className="App d-flex flex-column align-items-center">
       <div className="container">
       <Fade top>
-        <Header userScore={userScore}/>
+        <Header userScore={userScore} gameType={gameType}/>
       </Fade>
       <Switch>
           <Route path="/basic" exact={true}>
@@ -30,11 +33,19 @@ function App() {
               updateUserScore={updateUserScore}
             />
           </Route>
+          <Route path="/advanced" exact={true}>
+            <AdvancedRPSLS />
+          </Route>
           <Route path="/" exact={true}>
             <BasicRPS />
           </Route>
         </Switch>
-        <RulesButton gameType={gameType}/>
+        <Fade bottom>
+          <div className="row d-flex justify-content-center mt-4">
+            <RulesButton gameType={gameType} />
+            <SwitchButton gameType={gameType} switchGameMode={switchGameMode}/>
+          </div>
+        </Fade>
       </div>
     </div>
     </Router>

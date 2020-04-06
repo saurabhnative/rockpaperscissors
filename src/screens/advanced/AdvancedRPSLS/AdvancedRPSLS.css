@@ -1,0 +1,33 @@
+.advancedRPSLSContainer {
+    height: 61vh;
+    background-image: url('../../../assets/svgs/bg-pentagon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 58vw 46vw;
+}
+
+.advancedRPSLSTopContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.advancedRPSLSMiddleContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px -2vh;
+}
+
+.advancedRPSLSLowerContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4vh;
+}
+
+@media only screen and (min-width: 600px) {
+    .advancedRPSLSContainer {
+        background-size: 21vw 21vw;
+    }
+    .advancedRPSLSMiddleContainer {
+        margin: 0px 1vh;
+    }
+}

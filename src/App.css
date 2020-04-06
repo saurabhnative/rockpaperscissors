@@ -24,3 +24,11 @@
 .btn:focus {
   box-shadow: none;
 }
+
+.btn:hover {
+  color: white;
+}
+
+.modal-backdrop {
+  display: none;
+}

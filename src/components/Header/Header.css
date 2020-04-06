@@ -9,6 +9,11 @@
     line-height: 22px;
 }
 
+.advancedOptions {
+    font-size: 15px;
+    line-height: 15px;
+}
+
 .score-container {
     background-color: white;
     min-height: 80%;
