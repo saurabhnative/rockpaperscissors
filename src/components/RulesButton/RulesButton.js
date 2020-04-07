@@ -19,8 +19,9 @@ function RulesButton(props) {
         }
     }
     return(
-        <div>
+        <div className={'col-4  d-flex justify-content-center'}>
             <button type="button" className="btn lowerButton" data-toggle="modal" data-target="#rulesModal">
+                <i className={'fa fa-file-text mr-1'} aria-hidden="true"></i>
                 RULES
             </button>
             <div className="modal fade" id="rulesModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

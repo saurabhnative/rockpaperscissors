@@ -12,6 +12,8 @@ import BasicRPSChoice from './screens/basic/BasicRPSChoice/BasicRPSChoice';
 import AdvancedRPSLS from './screens/advanced/AdvancedRPSLS/AdvancedRPSLS';
 import RulesButton from './components/RulesButton/RulesButton';
 import SwitchButton from './components/SwitchButton/SwitchButton';
+import ResetButton from './components/ResetButton/ResetButton';
+
 import Fade from 'react-reveal/Fade';
 function App() {
   const getInitialScore = () => {
@@ -72,13 +74,16 @@ function App() {
           </Route>
         </Switch>
         <Fade bottom>
-          <div className="row d-flex justify-content-center mt-4">
+          <div className="row d-flex justify-content-center">
+            <div className="col-12 col-lg-6 mt-4 d-flex flex-row buttonsContainer">
             <RulesButton gameType={gameType} />
             <SwitchButton 
               gameType={gameType} 
               switchGameMode={switchGameMode} 
               updateUserScore={updateUserScore}
             />
+            <ResetButton updateUserScore={updateUserScore}/>
+            </div>
           </div>
         </Fade>
       </div>

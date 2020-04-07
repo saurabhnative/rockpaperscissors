@@ -11,8 +11,8 @@ function SwitchButton(props) {
         props.history.push(`/${switchText}`);
     }
     return(
-        <div className="ml-4">
-            <button type="button" className="btn lowerButton rightButton" onClick={() => changeGameMode()}>
+        <div className="col-4  d-flex justify-content-center">
+            <button type="button" className="btn lowerButton" onClick={() => changeGameMode()}>
              <div className="hv-center">
                 <i className={`fa ${switchIconClass} mr-1`} aria-hidden="true"></i>
                 <span>{switchText}</span>

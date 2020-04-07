@@ -18,6 +18,7 @@
     align-items: flex-end;
     height: 100%;
     padding-right: 19px;
+    margin-top: auto;
 }
 
 .rpsUpperRightItem {
@@ -35,10 +36,10 @@
 @media only screen and (min-width: 900px) {
     .rpsUpperLeftItem{
         padding-right: 85px;
-        padding-bottom: 20px;
+        padding-bottom: 7vh;
     }
     .rpsUpperRightItem { 
-        padding-left: 85px;
-        margin-top: 10px;
+        padding-left: 88px;
+        padding-bottom: 7vh;
     }
 }

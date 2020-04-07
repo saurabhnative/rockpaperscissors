@@ -5,6 +5,8 @@
     letter-spacing: 2px;
     color: white;
     text-transform: uppercase;
+    font-size: 13px;
+    max-width: 102px;
 }
 
 .basicRulesImage {
