@@ -13,7 +13,6 @@ import AdvancedRPSLS from './screens/advanced/AdvancedRPSLS/AdvancedRPSLS';
 import RulesButton from './components/RulesButton/RulesButton';
 import SwitchButton from './components/SwitchButton/SwitchButton';
 import ResetButton from './components/ResetButton/ResetButton';
-import WelcomePopUp from './components/WelcomePopUp/WelcomePopUp';
 import Fade from 'react-reveal/Fade';
 function App() {
   const getInitialScore = () => {
@@ -53,7 +52,6 @@ function App() {
     <Router>
     <div className="App d-flex flex-column align-items-center">
       <div className="container">
-      <WelcomePopUp />  
       <Fade top>
         <Header userScore={userScore} gameType={gameType}/>
       </Fade>
