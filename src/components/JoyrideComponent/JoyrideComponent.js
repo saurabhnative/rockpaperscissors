@@ -7,8 +7,6 @@ function JoyrideComponent(props) {
   
     useEffect(() => {
         if(!localStorage.getItem(props.localStorageItem)) {
-            console.log(props.runCondition);
-            
             if(props.runCondition) {
                 updateBasicIntroVisibility(true);
             }

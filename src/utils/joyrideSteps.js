@@ -6,13 +6,18 @@ const JoyrideSteps = [
     },
     {
         target: '#gameResultContainer',
-        content: 'Our compare the your choice with the one made by our system and the result of the game gets displayed here.',
+        content: 'The comparision between your choice and house choice is made and the result of the game gets displayed here.',
         disableBeacon: true
     },
     {
         target: '#rulesButtonsContainer',
         content: 'You can switch to advanced mode, reset your score or see rules from here',
         disableBeacon: true
+    },
+    {
+      target: '#rpsElementsContainer',
+      content: 'Advanced mode is inspired from Sheldon Copper\'s different version from Big Bang Thoery. You have two additional options of Lizard and Spock. Have fun playing!',
+      disableBeacon: true
     }
 ]
 

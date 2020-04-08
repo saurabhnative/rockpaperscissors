@@ -14,6 +14,8 @@ import RulesButton from './components/RulesButton/RulesButton';
 import SwitchButton from './components/SwitchButton/SwitchButton';
 import ResetButton from './components/ResetButton/ResetButton';
 import Fade from 'react-reveal/Fade';
+import JoyrideSteps from './utils/joyrideSteps';
+import JoyrideComponent from './components/JoyrideComponent/JoyrideComponent';
 function App() {
   const getInitialScore = () => {
     let initialScore = 0;
@@ -27,6 +29,7 @@ function App() {
     return initialScore;
   });
   const [gameType, switchGameMode] = useState('basic');
+  const steps = [JoyrideSteps[3]];
   const updateUserScore = (score, event) => {
     if(event === 'update') {
       handleUserScore(score);
@@ -38,8 +41,6 @@ function App() {
     } else {
       let existingScore = 0;
       const existingGameType = gameType;
-      console.log(gameType);
-      
       if(existingGameType === 'advanced' && localStorage.getItem("basicGameScore")) {
         existingScore = parseInt(localStorage.getItem("basicGameScore"),10);
       } else if(localStorage.getItem("advancedGameScore")){
@@ -50,7 +51,12 @@ function App() {
   }
   return (
     <Router>
-    <div className="App d-flex flex-column align-items-center">
+    <div className="App d-flex flex-column align-items-center" id="mainElementContainer">
+      <JoyrideComponent
+        steps={steps}
+        localStorageItem = {'hasSeenAdvancedIntro'}
+        runCondition= {gameType === 'advanced'}
+      />
       <div className="container" id="rpsElementsContainer">
       <Fade top>
         <Header userScore={userScore} gameType={gameType}/>
