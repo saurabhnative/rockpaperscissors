@@ -38,13 +38,8 @@ function WelcomePopUp(props) {
                         <span className={'mb-2'}>
                             Welcome to the game of rock, paper, scissors
                         </span>
-                        The steps to play are:<br></br>
-                        1. You pick up a choice<br></br>
-                        2. System selects a random choice<br></br>
-                        3. The best of the two wins<br></br>
                         <span className={'mt-2'}>
-                        There is an advanced version added for Big Bang Theory fans<br></br>
-                        You can reset your score anytime by clicking reset button at the bottom<br></br>
+                        Click on any one of the three choices to start playing
                         </span>
                         <br></br>
                     </div>

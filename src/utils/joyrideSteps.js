@@ -1,10 +1,5 @@
 const JoyrideSteps = [
     {
-      target: '#rpsElementsContainer',
-      content: 'Welcome to classic game of Rock, Paper, Scissors. Select any one of the below 3 choices to start playing',
-      disableBeacon: true
-    },
-    {
         target: '#gameResultContainer',
         content: 'The comparision between your choice and house choice is made and the result of the game gets displayed here.',
         disableBeacon: true

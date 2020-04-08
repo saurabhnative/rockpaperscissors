@@ -16,6 +16,7 @@ import ResetButton from './components/ResetButton/ResetButton';
 import Fade from 'react-reveal/Fade';
 import JoyrideSteps from './utils/joyrideSteps';
 import JoyrideComponent from './components/JoyrideComponent/JoyrideComponent';
+import WelcomePopUp from './components/WelcomePopUp/WelcomePopUp';
 function App() {
   const getInitialScore = () => {
     let initialScore = 0;
@@ -29,7 +30,7 @@ function App() {
     return initialScore;
   });
   const [gameType, switchGameMode] = useState('basic');
-  const steps = [JoyrideSteps[3]];
+  const steps = [JoyrideSteps[2]];
   const updateUserScore = (score, event) => {
     if(event === 'update') {
       handleUserScore(score);
@@ -57,6 +58,7 @@ function App() {
         localStorageItem = {'hasSeenAdvancedIntro'}
         runCondition= {gameType === 'advanced'}
       />
+      <WelcomePopUp />
       <div className="container" id="rpsElementsContainer">
       <Fade top>
         <Header userScore={userScore} gameType={gameType}/>

@@ -13,7 +13,7 @@ function BasicRPSChoice(props) {
     const [userChoice] = useState(props.location.state.userChoice);
     const gameType = props.location.state.gameType;
     const {userScore,updateUserScore} = props;
-    const steps = JoyrideSteps.slice(1,3);
+    const steps = JoyrideSteps.slice(0,2);
     useEffect(() => {
         const timer = setTimeout(() => {
             const randomHouseChoice = getHouseChoice(gameType);  
