@@ -73,7 +73,7 @@ function App() {
           </Route>
         </Switch>
         <Fade bottom>
-          <div className="row d-flex justify-content-center">
+          <div className="row d-flex justify-content-center" id={'rulesButtonsContainer'}>
             <div className="col-12 col-lg-6 mt-4 d-flex flex-row buttonsContainer">
             <RulesButton gameType={gameType} />
             <SwitchButton 

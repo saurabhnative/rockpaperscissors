@@ -5,13 +5,15 @@ import { getHouseChoice, getGameResult, calculateGameScore } from '../../../util
 import { withRouter } from "react-router-dom";
 import Fade from 'react-reveal/Fade';
 import Flash from 'react-reveal/Flash';
-
+import JoyrideSteps from '../../../utils/joyrideSteps';
+import JoyrideComponent from '../../../components/JoyrideComponent/JoyrideComponent';
 function BasicRPSChoice(props) {
     const [houseChoice, updateHouseChoice] = useState('empty');
     const [gameResult, updateGameResult] = useState(null);
     const [userChoice] = useState(props.location.state.userChoice);
     const gameType = props.location.state.gameType;
     const {userScore,updateUserScore} = props;
+    const steps = JoyrideSteps.slice(1,3);
     useEffect(() => {
         const timer = setTimeout(() => {
             const randomHouseChoice = getHouseChoice(gameType);  
@@ -57,7 +59,7 @@ function BasicRPSChoice(props) {
             )
         } else {
             return(
-                <div className='w-100 hv-center flex-column gameResultText'>
+                <div className='w-100 hv-center flex-column gameResultText' id={'gameResultContainer'}>
                     <span className="gameResultRuleText">
                         {gameResult.rule}
                     </span>
@@ -77,15 +79,20 @@ function BasicRPSChoice(props) {
     }
     return(
         <div className="row d-flex row d-flex align-items-center flex-column">
-          <div className="rpsChoice col-10 col-lg-6 mt-3 hv-center">
-            {renderChoiceComponent(userChoice, 'YOU PICKED')}
-            {renderChoiceComponent(houseChoice, 'THE HOUSE PICKED')}
-          </div>
-          <div className="gameResult col-10 col-lg-6 mt-2 hv-center">
-            <Flash bottom when={gameResult !== null}>
-             {renderGameResult()} 
-             </Flash>
-          </div>
+            <JoyrideComponent 
+                    steps={steps}
+                    localStorageItem = {'hasSeenBasicGameResult'}
+                    runCondition={gameResult}
+            />
+            <div className="rpsChoice col-10 col-lg-6 mt-3 hv-center">
+                {renderChoiceComponent(userChoice, 'YOU PICKED')}
+                {renderChoiceComponent(houseChoice, 'THE HOUSE PICKED')}
+            </div>
+            <div className="gameResult col-10 col-lg-6 mt-2 hv-center">
+                <Flash bottom when={gameResult !== null}>
+                {renderGameResult()} 
+                </Flash>
+            </div>
         </div>
     )
 }

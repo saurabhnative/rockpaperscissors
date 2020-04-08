@@ -7,11 +7,17 @@ function JoyrideComponent(props) {
   
     useEffect(() => {
         if(!localStorage.getItem(props.localStorageItem)) {
-           updateBasicIntroVisibility(true); 
+            console.log(props.runCondition);
+            
+            if(props.runCondition) {
+                updateBasicIntroVisibility(true);
+            }
         } 
-      }, [props.localStorageItem])
+      }, [props.localStorageItem, props.runCondition])
     const handleJoyrideCallback = (data) => {
         const { action, index, status, type } = data;
+        console.log(shouldShowBasicIntro, stepIndex, action, index, status, type);
+        
         if ([EVENTS.STEP_AFTER, EVENTS.TARGET_NOT_FOUND].includes(type)) {
           // Update state to advance the tour
           const updatedStepIndex = index + (action === ACTIONS.PREV ? -1 : 1); 
@@ -25,7 +31,7 @@ function JoyrideComponent(props) {
     }
     return(
         <Joyride
-          steps={[props.steps]}
+          steps={props.steps}
           run={shouldShowBasicIntro}
           callback={handleJoyrideCallback}
           stepIndex={stepIndex}
