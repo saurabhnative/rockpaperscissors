@@ -7,7 +7,7 @@ import JoyrideComponent from '../../../components/JoyrideComponent/JoyrideCompon
 function BasicRPS(props) {
   const steps = JoyrideSteps[0];
   return(
-      <div className="row d-flex justify-content-center" id="rpsElementsContainer">
+      <div className="row d-flex justify-content-center">
         <JoyrideComponent 
           steps={steps}
           localStorageItem = {'hasSeenBasicIntro'}

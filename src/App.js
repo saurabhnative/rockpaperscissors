@@ -51,7 +51,7 @@ function App() {
   return (
     <Router>
     <div className="App d-flex flex-column align-items-center">
-      <div className="container">
+      <div className="container" id="rpsElementsContainer">
       <Fade top>
         <Header userScore={userScore} gameType={gameType}/>
       </Fade>
