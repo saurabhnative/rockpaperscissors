@@ -1,5 +1,5 @@
 function randomIntFromInterval(min, max) { // min and max included 
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.floor(Math.random()%max * (max - min + 1) + min);
 }
 /**
  * Function to generate random choice from computer's side
