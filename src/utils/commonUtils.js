@@ -1,6 +1,12 @@
+/**
+ * Get random number between min and max
+ * @param {*} min 
+ * @param {*} max 
+ */
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random()%max * (max - min + 1) + min);
 }
+
 /**
  * Function to generate random choice from computer's side
  * @param {*} type 
@@ -65,6 +71,11 @@ export const getGameResult = (userChoice, houseChoice) => {
     return processMove(userChoice, houseChoice);
 }
 
+/**
+ * Update game score based on game result
+ * @param {*} userScore 
+ * @param {*} gameResult 
+ */
 export const calculateGameScore = (userScore, gameResult) => {
     switch(gameResult.value) {
         case 'win':
@@ -85,6 +96,11 @@ export const calculateGameScore = (userScore, gameResult) => {
     }
 }
 
+/**
+ * Display result of the game choices
+ * @param {*} victorChoice 
+ * @param {*} loserChoice 
+ */
 const getGameResultRuleText = (victorChoice, loserChoice) => {  
     const rules = {
         rock: {
