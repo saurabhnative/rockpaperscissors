@@ -11,7 +11,7 @@ const JoyrideSteps = [
     },
     {
       target: '#mainElementContainer',
-      content: 'Advanced mode is inspired from Sheldon Copper\'s different version from Big Bang Thoery. You have two additional options of Lizard and Spock. Have fun playing!',
+      content: 'Advanced mode is inspired from Sheldon Cooper\'s different version from Big Bang Thoery. You have two additional options of Lizard and Spock. Have fun playing!',
       disableBeacon: true
     }
 ]
