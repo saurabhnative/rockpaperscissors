@@ -9,6 +9,11 @@
     max-width: 102px;
 }
 
+.modal {
+    top: -560px;
+    height: 70vh;
+}
+
 .basicRulesImage {
     width: 275px;
 }
